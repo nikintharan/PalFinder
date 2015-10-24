@@ -88,7 +88,7 @@ void palfinder_app_view_model_deinit(PalfinderAppMainWindowViewModel *model) {
 
 static PalfinderAppDataPoint s_data_points[] = {
     {
-        .mood = "Want to study,
+        .mood = "Want to study",
         .description = "Chemistry",
         .icon = PALFINDER_APP_ICON_LIGHT_RAIN,
         .current = 68,
@@ -96,7 +96,7 @@ static PalfinderAppDataPoint s_data_points[] = {
         .low = 60,
     },
     {
-        .mood = "Want to study,
+        .mood = "Want to study",
         .description = "Physics",
         .icon = PALFINDER_APP_ICON_SUNNY_DAY,
         .current = 100,
@@ -104,7 +104,7 @@ static PalfinderAppDataPoint s_data_points[] = {
         .low = 80,
     },
     {
-        .mood = "Want to study,
+        .mood = "Want to study",
         .description = "Mathematics",
         .icon = PALFINDER_APP_ICON_HEAVY_SNOW,
         .current = 60,
@@ -113,7 +113,7 @@ static PalfinderAppDataPoint s_data_points[] = {
     },
     {
         
-        .mood = "Want to study,
+        .mood = "Want to study",
         .description = "Biology",
         .icon = PALFINDER_APP_ICON_GENERIC_PALFINDER,
         .current = 110,
