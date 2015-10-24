@@ -17,7 +17,7 @@ typedef struct {
     GColor bottom;
     int32_t to_bottom_normalized;
   } bg_color;
-  char *city;
+  char *mood;
   struct {
     int16_t value;
     char text[8];
@@ -43,7 +43,7 @@ typedef struct {
 void palfinder_app_main_window_view_model_announce_changed(PalfinderAppMainWindowViewModel *model);
 
 typedef struct {
-  char *city;
+  char *mood;
   char *description;
   int icon;
   int16_t current;

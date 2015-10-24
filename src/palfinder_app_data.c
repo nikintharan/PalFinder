@@ -40,7 +40,7 @@ PalfinderDataViewNumbers palfinder_app_data_point_view_model_numbers(PalfinderAp
 int palfinder_app_index_of_data_point(PalfinderAppDataPoint *dp);
 
 void palfinder_app_view_model_fill_strings_and_pagination(PalfinderAppMainWindowViewModel *view_model, PalfinderAppDataPoint *data_point) {
-  view_model->city = data_point->city;
+  view_model->mood = data_point->mood;
   view_model->description = data_point->description;
 
   view_model->pagination.idx = (int16_t)(1 + palfinder_app_index_of_data_point(data_point));
@@ -88,32 +88,33 @@ void palfinder_app_view_model_deinit(PalfinderAppMainWindowViewModel *model) {
 
 static PalfinderAppDataPoint s_data_points[] = {
     {
-        .city = "PALO ALTO",
-        .description = "Light Rain.",
+        .mood = "Want to study,
+        .description = "Chemistry",
         .icon = PALFINDER_APP_ICON_LIGHT_RAIN,
         .current = 68,
         .high = 70,
         .low = 60,
     },
     {
-        .city = "LOS ANGELES",
-        .description = "Clear throughout the day.",
+        .mood = "Want to study,
+        .description = "Physics",
         .icon = PALFINDER_APP_ICON_SUNNY_DAY,
         .current = 100,
         .high = 100,
         .low = 80,
     },
     {
-        .city = "SAN FRANCISCO",
-        .description = "Rain and Fog.",
+        .mood = "Want to study,
+        .description = "Mathematics",
         .icon = PALFINDER_APP_ICON_HEAVY_SNOW,
         .current = 60,
         .high = 62,
         .low = 56,
     },
     {
-        .city = "SAN DIEGO",
-        .description = "Surfboard :)",
+        
+        .mood = "Want to study,
+        .description = "Biology",
         .icon = PALFINDER_APP_ICON_GENERIC_PALFINDER,
         .current = 110,
         .high = 120,
