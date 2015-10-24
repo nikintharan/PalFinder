@@ -20,7 +20,7 @@ typedef struct {
   char *mood;
   struct {
     int16_t value;
-    char text[8];
+    char text[10];
   } temperature;
   struct {
     GDrawCommandImage *draw_command;
