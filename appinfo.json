@@ -1,0 +1,60 @@
+{
+    "appKeys": {
+        "dummy": 0
+    },
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "HackingEDU",
+    "longName": "PalFinder",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "data/Pebble_50x50_Sunny_day.pdc",
+                "name": "ICON_SUNNY_DAY",
+                "type": "raw"
+            },
+            {
+                "file": "data/Pebble_50x50_Partly_cloudy.pdc",
+                "name": "ICON_PARTLY_CLOUDY",
+                "type": "raw"
+            },
+            {
+                "file": "data/Pebble_50x50_Light_snow.pdc",
+                "name": "ICON_LIGHT_SNOW",
+                "type": "raw"
+            },
+            {
+                "file": "data/Pebble_50x50_Light_rain.pdc",
+                "name": "ICON_LIGHT_RAIN",
+                "type": "raw"
+            },
+            {
+                "file": "data/Pebble_50x50_Heavy_snow.pdc",
+                "name": "ICON_HEAVY_SNOW",
+                "type": "raw"
+            },
+            {
+                "file": "data/Pebble_50x50_Heavy_rain.pdc",
+                "name": "ICON_HEAVY_RAIN",
+                "type": "raw"
+            },
+            {
+                "file": "data/Pebble_50x50_Generic_weather.pdc",
+                "name": "ICON_GENERIC_WEATHER",
+                "type": "raw"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "PalFinder",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "ae8b2bc4-7f29-41c4-b8e5-d0b3d7a999ad",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
