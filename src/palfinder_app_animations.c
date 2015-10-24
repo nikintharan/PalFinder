@@ -5,6 +5,7 @@
 #include <pebble.h>
 #include "palfinder_app_animations.h"
 #include "palfinder_app_private.h"
+#include "palfinder_app_data.h"
 
 typedef void (*PalfinderDataAnimatedNumbersSetter)(PalfinderAppData *data, PalfinderDataViewNumbers numbers);
 

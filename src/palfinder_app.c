@@ -98,7 +98,7 @@ static void view_model_changed(struct PalfinderAppMainWindowViewModel *arg) {
 
   PalfinderAppData *data = window_get_user_data(s_main_window);
 
-  text_layer_set_text(data->city_layer, model->city);
+  text_layer_set_text(data->mood_layer, model->mood);
   text_layer_set_text(data->temperature_layer, model->temperature.text);
   text_layer_set_text(data->highlow_layer, model->highlow.text);
   text_layer_set_text(data->description_layer, model->description);
@@ -122,7 +122,7 @@ static void main_window_load(Window *window) {
 
   const int16_t narrow_buffer = 5; // current whitespacing would trim 3-digit temperature otherwise
   const int16_t narrow = ICON_DIMENSIONS + 2 - narrow_buffer;
-  init_text_layer(window_layer, &data->city_layer, 23, 30, 0, FONT_KEY_GOTHIC_18_BOLD);
+  init_text_layer(window_layer, &data->mood_layer, 23, 30, 0, FONT_KEY_GOTHIC_18_BOLD);
   const int16_t temperature_top = 49;
   init_text_layer(window_layer, &data->temperature_layer, temperature_top, 40, narrow, FONT_KEY_LECO_38_BOLD_NUMBERS);
   init_text_layer(window_layer, &data->highlow_layer, 91, 19, narrow, FONT_KEY_GOTHIC_14);
@@ -153,7 +153,7 @@ static void main_window_unload(Window *window) {
   palfinder_app_view_model_deinit(&data->view_model);
 
   layer_destroy(data->horizontal_ruler_layer);
-  text_layer_destroy(data->city_layer);
+  text_layer_destroy(data->mood_layer);
   text_layer_destroy(data->temperature_layer);
   text_layer_destroy(data->highlow_layer);
   text_layer_destroy(data->description_layer);
@@ -198,22 +198,22 @@ typedef enum {
 static Animation *create_outbound_anim(PalfinderAppData *data, ScrollDirection direction) {
   const int16_t to_dy = (direction == ScrollDirectionDown) ? -SCROLL_DIST_OUT : SCROLL_DIST_OUT;
 
-  Animation *out_city = create_anim_scroll_out(text_layer_get_layer(data->city_layer), SCROLL_DURATION, to_dy);
+  Animation *out_mood = create_anim_scroll_out(text_layer_get_layer(data->mood_layer), SCROLL_DURATION, to_dy);
   Animation *out_description = create_anim_scroll_out(text_layer_get_layer(data->description_layer), SCROLL_DURATION, to_dy);
   Animation *out_ruler = create_anim_scroll_out(data->horizontal_ruler_layer, SCROLL_DURATION, to_dy);
 
-  return animation_spawn_create(out_city, out_description, out_ruler, NULL);
+  return animation_spawn_create(out_mood, out_description, out_ruler, NULL);
 }
 
 static Animation *create_inbound_anim(PalfinderAppData *data, ScrollDirection direction) {
   const int16_t from_dy = (direction == ScrollDirectionDown) ? -SCROLL_DIST_IN : SCROLL_DIST_IN;
 
-  Animation *in_city = create_anim_scroll_in(text_layer_get_layer(data->city_layer), SCROLL_DURATION, from_dy);
+  Animation *in_mood = create_anim_scroll_in(text_layer_get_layer(data->mood_layer), SCROLL_DURATION, from_dy);
   Animation *in_description = create_anim_scroll_in(text_layer_get_layer(data->description_layer), SCROLL_DURATION, from_dy);
   Animation *in_highlow = create_anim_scroll_in(text_layer_get_layer(data->highlow_layer), SCROLL_DURATION, from_dy);
   Animation *in_ruler = create_anim_scroll_in(data->horizontal_ruler_layer, SCROLL_DURATION, from_dy);
 
-  return animation_spawn_create(in_city, in_description, in_highlow, in_ruler, NULL);
+  return animation_spawn_create(in_mood, in_description, in_highlow, in_ruler, NULL);
 }
 
 static Animation *animation_for_scroll(PalfinderAppData *data, ScrollDirection direction, PalfinderAppDataPoint *next_data_point) {

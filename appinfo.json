@@ -11,6 +11,11 @@
     "resources": {
         "media": [
             {
+                "file": "data/Pebble_50x50_Generic_palfinder.pdc",
+                "name": "ICON_GENERIC_PALFINDER",
+                "type": "raw"
+            },
+            {
                 "file": "data/Pebble_50x50_Sunny_day.pdc",
                 "name": "ICON_SUNNY_DAY",
                 "type": "raw"
@@ -38,11 +43,6 @@
             {
                 "file": "data/Pebble_50x50_Heavy_rain.pdc",
                 "name": "ICON_HEAVY_RAIN",
-                "type": "raw"
-            },
-            {
-                "file": "data/Pebble_50x50_Generic_weather.pdc",
-                "name": "ICON_GENERIC_WEATHER",
                 "type": "raw"
             }
         ]

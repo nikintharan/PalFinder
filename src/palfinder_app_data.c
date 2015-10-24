@@ -22,7 +22,7 @@ void palfinder_app_view_model_set_temperature(PalfinderAppMainWindowViewModel *m
   model->temperature.value = value;
   snprintf(model->temperature.text, sizeof(model->temperature.text), "%d°", model->temperature.value);
 }
-https://cloudpebble.net/ide/project/258737#
+
 void palfinder_app_view_model_set_icon(PalfinderAppMainWindowViewModel *model, GDrawCommandImage *image) {
   free(model->icon.draw_command);
   model->icon.draw_command = image;
